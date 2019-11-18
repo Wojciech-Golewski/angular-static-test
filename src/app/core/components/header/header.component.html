@@ -1,8 +1,24 @@
 <mat-toolbar color="primary">
     <mat-toolbar-row>
-      <span>Angular Static Test</span>
+      <div>
+        <span
+          routerLink="/"
+          matTooltip="Go Back to the Main Page"
+          class="app-title"
+          >Angular Static Test</span>
+      </div>
       <span class="spacer"></span>
-      <span>Shop</span>
-      <span>Check Material Files</span>
+      <div
+        routerLink="/shop"
+        routerLinkActive="active-link"
+        class="my-button-white">
+        <span>Shop</span>
+      </div>
+      <div
+        routerLink="/material-file-tree"
+        routerLinkActive="active-link"
+        class="my-button-white">
+        <span>Check Material Files</span>
+      </div>
     </mat-toolbar-row>
   </mat-toolbar>
