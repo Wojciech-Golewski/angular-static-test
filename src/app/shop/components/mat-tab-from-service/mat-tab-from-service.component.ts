@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatTableDataSource } from '@angular/material/table';
+import { TableData, TableFeedService } from '../../services/table-feed.service';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatSort } from '@angular/material/sort';
 
 @Component({
   selector: 'app-mat-tab-from-service',
@@ -6,10 +10,36 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./mat-tab-from-service.component.scss']
 })
 export class MatTabFromServiceComponent implements OnInit {
+  displayedColumns: string[];
+  dataSource: MatTableDataSource<TableData>;
+  arrayData: any[] = [];
+  dataPerCol: Map<string, string> = new Map<string, string>([
+    [ 'id', 'ID' ],
+    [ 'name', 'Name' ],
+    [ 'cost', 'Price' ]
+  ])
+  
+  @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
+  @ViewChild(MatSort, {static: true}) sort: MatSort;
 
-  constructor() { }
+  constructor(private tableFeedService: TableFeedService) { }
 
   ngOnInit() {
+    this.tableFeedService.getAllData().subscribe(data => {
+      this.displayedColumns = data.headings;
+      this.arrayData.push(data);
+      this.dataSource = new MatTableDataSource(this.arrayData[0].data);
+    })
+    this.dataSource.paginator = this.paginator;
+    this.dataSource.sort = this.sort;
+  }
+  
+  applyFilter(filterValue: string) {
+    this.dataSource.filter = filterValue.trim().toLowerCase();
+
+    if (this.dataSource.paginator) {
+      this.dataSource.paginator.firstPage();
+    }
   }
 
 }
