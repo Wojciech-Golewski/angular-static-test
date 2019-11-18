@@ -4,6 +4,13 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { MainComponent } from './components/main/main.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatCardModule } from '@angular/material/card';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { LayoutModule } from '@angular/cdk/layout';
 
 
 
@@ -12,16 +19,24 @@ import { MainComponent } from './components/main/main.component';
     HeaderComponent,
     FooterComponent,
     NotFoundComponent,
-    MainComponent
+    MainComponent,
+    DashboardComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    MatGridListModule,
+    MatCardModule,
+    MatMenuModule,
+    MatIconModule,
+    MatButtonModule,
+    LayoutModule
   ],
   exports: [
     HeaderComponent,
     FooterComponent,
     NotFoundComponent,
-    MainComponent
+    MainComponent,
+    DashboardComponent
   ]
 })
 export class CoreModule { }
