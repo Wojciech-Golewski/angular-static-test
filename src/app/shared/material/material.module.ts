@@ -10,6 +10,10 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatTabsModule } from '@angular/material/tabs';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material';
+import { MatInputModule } from '@angular/material/input';
 
 
 
@@ -24,7 +28,11 @@ import { MatTabsModule } from '@angular/material/tabs';
     LayoutModule,
     MatTreeModule,
     MatTooltipModule,
-    MatTabsModule
+    MatTabsModule,
+    MatFormFieldModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatInputModule
   ],
   exports: [
     MatToolbarModule,
@@ -36,7 +44,11 @@ import { MatTabsModule } from '@angular/material/tabs';
     LayoutModule,
     MatTreeModule,
     MatTooltipModule,
-    MatTabsModule
+    MatTabsModule,
+    MatFormFieldModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatInputModule
   ]
 })
 export class MaterialModule { }
