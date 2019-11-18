@@ -5,12 +5,14 @@ import { ShopRoutingModule } from './shop-routing.module';
 import { ShopMainComponent } from './components/shop-main/shop-main.component';
 import { SharedModule } from '../shared/shared.module';
 import { MatDefaultTableComponent } from './components/mat-default-table/mat-default-table.component';
+import { MatTabFromServiceComponent } from './components/mat-tab-from-service/mat-tab-from-service.component';
 
 
 @NgModule({
   declarations: [
     ShopMainComponent,
-    MatDefaultTableComponent
+    MatDefaultTableComponent,
+    MatTabFromServiceComponent
   ],
   imports: [
     CommonModule,
