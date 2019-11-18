@@ -8,6 +8,8 @@ import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { MatTooltipModule } from '@angular/material/tooltip';
+
 
 
 @NgModule({
@@ -19,7 +21,8 @@ import { MatButtonModule } from '@angular/material/button';
     MatIconModule,
     MatButtonModule,
     LayoutModule,
-    MatTreeModule
+    MatTreeModule,
+    MatTooltipModule
   ],
   exports: [
     MatToolbarModule,
@@ -29,7 +32,8 @@ import { MatButtonModule } from '@angular/material/button';
     MatIconModule,
     MatButtonModule,
     LayoutModule,
-    MatTreeModule
+    MatTreeModule,
+    MatTooltipModule
   ]
 })
 export class MaterialModule { }
