@@ -31,6 +31,7 @@ export class MatTabFromServiceComponent implements OnInit {
       this.dataSource = new MatTableDataSource(this.arrayData[0].data);
     },
     (error) => {
+      // TODO: Errors Logging should be here
       console.log('Error encountered : ', error);
     },
     () => {
