@@ -11,6 +11,8 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { LayoutModule } from '@angular/cdk/layout';
+import { TreeComponent } from './components/tree/tree.component';
+import { MatTreeModule } from '@angular/material/tree';
 
 
 
@@ -20,7 +22,8 @@ import { LayoutModule } from '@angular/cdk/layout';
     FooterComponent,
     NotFoundComponent,
     MainComponent,
-    DashboardComponent
+    DashboardComponent,
+    TreeComponent
   ],
   imports: [
     CommonModule,
@@ -29,7 +32,8 @@ import { LayoutModule } from '@angular/cdk/layout';
     MatMenuModule,
     MatIconModule,
     MatButtonModule,
-    LayoutModule
+    LayoutModule,
+    MatTreeModule
   ],
   exports: [
     HeaderComponent,
