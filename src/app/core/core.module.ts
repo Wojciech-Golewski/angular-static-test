@@ -4,6 +4,10 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { MainComponent } from './components/main/main.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { TreeComponent } from './components/tree/tree.component';
+import { SharedModule } from '../shared/shared.module';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -12,16 +16,21 @@ import { MainComponent } from './components/main/main.component';
     HeaderComponent,
     FooterComponent,
     NotFoundComponent,
-    MainComponent
+    MainComponent,
+    DashboardComponent,
+    TreeComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule,
+    SharedModule,
   ],
   exports: [
     HeaderComponent,
     FooterComponent,
     NotFoundComponent,
-    MainComponent
+    MainComponent,
+    DashboardComponent
   ]
 })
 export class CoreModule { }
