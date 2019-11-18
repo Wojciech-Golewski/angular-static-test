@@ -12,7 +12,8 @@ const routes: Routes = [
   {
     path: '**',
     component: NotFoundComponent
-  }
+  },
+  { path: 'shop', loadChildren: () => import('./shop/shop.module').then(m => m.ShopModule) }
 ];
 
 @NgModule({
