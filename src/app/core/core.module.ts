@@ -7,6 +7,7 @@ import { MainComponent } from './components/main/main.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { TreeComponent } from './components/tree/tree.component';
 import { SharedModule } from '../shared/shared.module';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -21,6 +22,7 @@ import { SharedModule } from '../shared/shared.module';
   ],
   imports: [
     CommonModule,
+    RouterModule,
     SharedModule,
   ],
   exports: [
