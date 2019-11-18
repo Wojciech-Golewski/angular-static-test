@@ -29,9 +29,14 @@ export class MatTabFromServiceComponent implements OnInit {
       this.displayedColumns = data.headings;
       this.arrayData.push(data);
       this.dataSource = new MatTableDataSource(this.arrayData[0].data);
+    },
+    (error) => {
+      console.log('Error encountered : ', error);
+    },
+    () => {
+      this.dataSource.paginator = this.paginator;
+      this.dataSource.sort = this.sort;
     })
-    this.dataSource.paginator = this.paginator;
-    this.dataSource.sort = this.sort;
   }
   
   applyFilter(filterValue: string) {
