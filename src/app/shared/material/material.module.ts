@@ -9,6 +9,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatTabsModule } from '@angular/material/tabs';
 
 
 
@@ -22,7 +23,8 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     MatButtonModule,
     LayoutModule,
     MatTreeModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatTabsModule
   ],
   exports: [
     MatToolbarModule,
@@ -33,7 +35,8 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     MatButtonModule,
     LayoutModule,
     MatTreeModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatTabsModule
   ]
 })
 export class MaterialModule { }
