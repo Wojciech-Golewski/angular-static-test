@@ -20,7 +20,8 @@ import { MainComponent } from './components/main/main.component';
   exports: [
     HeaderComponent,
     FooterComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    MainComponent
   ]
 })
 export class CoreModule { }
