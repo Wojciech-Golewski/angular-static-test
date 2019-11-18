@@ -6,6 +6,11 @@ import { NotFoundComponent } from './core/components/not-found/not-found.compone
 
 const routes: Routes = [
   {
+    path: 'shop',
+    loadChildren: () => import('./shop/shop.module')
+    .then(m => m.ShopModule)
+  },
+  {
     path: '',
     component: MainComponent
   },
@@ -13,7 +18,6 @@ const routes: Routes = [
     path: '**',
     component: NotFoundComponent
   },
-  { path: 'shop', loadChildren: () => import('./shop/shop.module').then(m => m.ShopModule) }
 ];
 
 @NgModule({
