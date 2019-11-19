@@ -12,8 +12,8 @@ import { MatSort } from '@angular/material/sort';
 export class MatTabFromServiceComponent implements OnInit {
   displayedColumns: string[];
   dataSource: MatTableDataSource<TableData>;
-  arrayData: any[] = [];
-  dataPerCol: Map<string, string> = new Map<string, string>([
+  dataToTable: any[] = [];
+  propertyMapToValue: Map<string, string> = new Map<string, string>([
     [ 'id', 'ID' ],
     [ 'name', 'Name' ],
     [ 'cost', 'Price' ]
@@ -27,8 +27,8 @@ export class MatTabFromServiceComponent implements OnInit {
   ngOnInit() {
     this.tableFeedService.getAllData().subscribe(data => {
       this.displayedColumns = data.headings;
-      this.arrayData.push(data);
-      this.dataSource = new MatTableDataSource(this.arrayData[0].data);
+      this.dataToTable.push(data);
+      this.dataSource = new MatTableDataSource(this.dataToTable[0].data);
     },
     (error) => {
       // TODO: Errors Logging should be here
