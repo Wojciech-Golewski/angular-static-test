@@ -6,13 +6,15 @@ import { SharedModule } from '../shared/shared.module';
 import { MatDefaultTableComponent } from './components/mat-default-table/mat-default-table.component';
 import { MatTabFromServiceComponent } from './components/mat-tab-from-service/mat-tab-from-service.component';
 import { TableMainComponent } from './components/table-main/table-main.component';
+import { FormInputMainComponent } from './components/form-input-main/form-input-main.component';
 
 
 @NgModule({
   declarations: [
     TableMainComponent,
     MatDefaultTableComponent,
-    MatTabFromServiceComponent
+    MatTabFromServiceComponent,
+    FormInputMainComponent
   ],
   imports: [
     CommonModule,
