@@ -1,12 +1,17 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { ShopMainComponent } from './components/shop-main/shop-main.component';
+import { TableMainComponent } from './components/table-main/table-main.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: ShopMainComponent
+    children: [
+      {
+        path: 'table',
+        component: TableMainComponent
+      }
+    ]
   }
 ];
 
