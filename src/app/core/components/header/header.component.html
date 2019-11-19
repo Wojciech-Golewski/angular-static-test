@@ -1,19 +1,30 @@
 <mat-toolbar color="primary">
     <mat-toolbar-row>
-      <div>
-        <span
-          routerLink="/"
-          matTooltip="Go Back to the Main Page"
-          class="app-title"
-          >Angular Static Test</span>
+      <div
+        routerLink="/"
+        matTooltip="Go Back to the Main Page"
+        class="app-title">
+        <span>Angular Static Test</span>
       </div>
       <span class="spacer"></span>
       <div
-        routerLink="/shop"
         routerLinkActive="active-link"
+        [matMenuTriggerFor]="shopMenu"
         class="my-button-white">
         <span>Shop</span>
       </div>
+      <mat-menu #shopMenu="matMenu">
+        <button
+          mat-menu-item
+          routerLink="/shop/table">
+          Table
+        </button>
+        <button
+          mat-menu-item
+          routerLink="/shop/form-input">
+          Form Input
+        </button>
+      </mat-menu>
       <div
         routerLink="/material-file-tree"
         routerLinkActive="active-link"
