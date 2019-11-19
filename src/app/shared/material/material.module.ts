@@ -9,6 +9,12 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material';
+import { MatInputModule } from '@angular/material/input';
+import { MatSortModule } from '@angular/material/sort';
 
 
 
@@ -22,7 +28,13 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     MatButtonModule,
     LayoutModule,
     MatTreeModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatTabsModule,
+    MatFormFieldModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatInputModule,
+    MatSortModule
   ],
   exports: [
     MatToolbarModule,
@@ -33,7 +45,13 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     MatButtonModule,
     LayoutModule,
     MatTreeModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatTabsModule,
+    MatFormFieldModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatInputModule,
+    MatSortModule
   ]
 })
 export class MaterialModule { }
